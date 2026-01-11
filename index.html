@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing VA Guide 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 1%;
+            color: #2d3748;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+            color: white;
+            padding: 15px 1%;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 3px;
+        }
+
+        .header p {
+            font-size: 0.75rem;
+            opacity: 0.95;
+        }
+
+        .quick-nav {
+            background: #f7fafc;
+            padding: 8px 1%;
+            border-bottom: 2px solid #e2e8f0;
+            display: flex;
+            gap: 6px;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .quick-nav button {
+            background: white;
+            border: 1px solid #cbd5e0;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.2s;
+            flex-shrink: 0;
+        }
+
+        .quick-nav button:active {
+            background: #667eea;
+            color: white;
+            transform: scale(0.95);
+        }
+
+        .content {
+            padding: 1%;
+        }
+
+        .section {
+            margin-bottom: 12px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+            background: white;
+        }
+
+        .section-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 1%;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            transition: all 0.2s;
+        }
+
+        .section-header:active {
+            background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+        }
+
+        .section-header h2 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .icon {
+            font-size: 1.1rem;
+        }
+
+        .toggle {
+            font-size: 1.2rem;
+            transition: transform 0.3s;
+        }
+
+        .section.active .toggle {
+            transform: rotate(180deg);
+        }
+
+        .section-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: #f8f9fa;
+        }
+
+        .section.active .section-content {
+            max-height: 2000px;
+        }
+
+        .section-inner {
+            padding: 12px 1%;
+        }
+
+        .task-list {
+            list-style: none;
+        }
+
+        .task-list li {
+            padding: 8px 1%;
+            margin-bottom: 6px;
+            background: white;
+            border-left: 3px solid #667eea;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            line-height: 1.5;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .task-list li strong {
+            color: #667eea;
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .tip-box {
+            background: #fff5e6;
+            border-left: 4px solid #f6ad55;
+            padding: 10px 1%;
+            margin: 10px 0;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        .tip-box strong {
+            color: #c05621;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .tool-card {
+            background: white;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+            transition: all 0.2s;
+        }
+
+        .tool-card:active {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(102, 126, 234, 0.2);
+        }
+
+        .tool-card .tool-icon {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .tool-card .tool-name {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        .footer {
+            background: #2d3748;
+            color: white;
+            padding: 15px 1%;
+            text-align: center;
+            font-size: 0.7rem;
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.1rem;
+            }
+            
+            .section-header h2 {
+                font-size: 0.85rem;
+            }
+            
+            .tool-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📱 Marketing VA Guide 2026</h1>
+            <p>Complete Instructions for Filipino Virtual Assistants</p>
+        </div>
+
+        <div class="quick-nav">
+            <button onclick="scrollToSection('social')">📱 Social</button>
+            <button onclick="scrollToSection('content')">✍️ Content</button>
+            <button onclick="scrollToSection('email')">📧 Email</button>
+            <button onclick="scrollToSection('analytics')">📊 Data</button>
+            <button onclick="scrollToSection('client')">📞 Clients</button>
+            <button onclick="scrollToSection('ads')">🎯 Ads</button>
+            <button onclick="scrollToSection('ecommerce')">🛍️ Store</button>
+            <button onclick="scrollToSection('video')">🎥 Video</button>
+            <button onclick="scrollToSection('leads')">💰 Leads</button>
+            <button onclick="scrollToSection('influencer')">🤝 Partners</button>
+            <button onclick="scrollToSection('security')">🔐 Security</button>
+            <button onclick="scrollToSection('rates')">💵 Rates</button>
+            <button onclick="scrollToSection('platforms')">📱 Platforms</button>
+            <button onclick="scrollToSection('productivity')">🚀 Flow</button>
+            <button onclick="scrollToSection('resources')">📚 Learn</button>
+            <button onclick="scrollToSection('international')">🌍 Global</button>
+            <button onclick="scrollToSection('portfolio')">⭐ Growth</button>
+            <button onclick="scrollToSection('tools')">🛠️ Tools</button>
+        </div>
+
+        <div class="content">
+            <!-- Social Media Management -->
+            <div class="section" id="social">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <h2><span class="icon">📱</span> Social Media Management</h2>
+                    <span class="toggle">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-inner">
+                        <ul class="task-list">
+                            <li>
+                                <strong>Daily Posting Schedule</strong>
+                                Post 3-5 times daily across platforms. Best times: 9AM, 12PM, 6PM PHT. Use scheduling tools like Buffer or Hootsuite.
+                            </li>
+                            <li>
+                                <strong>Content Calendar Planning</strong>
+                                Plan 2 weeks ahead. Mix: 40% promotional, 30% educational, 30% engagement. Track holidays and trends.
+                            </li>
+                            <li>
+                                <strong>Community Engagement</strong>
+                                Respond to comments within 2 hours. Like, reply, and engage with followers. Monitor brand mentions daily.
+                            </li>
+                            <li>
+                                <strong>Hashtag Strategy</strong>
+                                Use 10-15 hashtags per post. Mix: 5 trending, 5 niche, 5 branded. Research competitors' hashtags.
+                            </li>
+                            <li>
+                                <strong>Stories & Reels</strong>
+                                Post 2-3 stories daily. Create 1-2 Reels weekly. Use trending audio and effects. 15-30 second duration.
+                            </li>
+                        </ul>
+                        <div class="tip-box">
+                            <strong>💡 Pro Tip:</strong>
+                            Save high-performing posts as templates. Analyze which content types get most engagement and replicate success.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Creation -->
+            <div class="section" id="content">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <h2><span class="icon">✍️</span> Content Creation</h2>
+                    <span class="toggle">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-inner">
+                        <ul class="task-list">
+                            <li>
+                                <strong>Graphics Design</strong>
+                                Use Canva for social posts (1080x1080 for Instagram, 1200x628 for Facebook). Maintain brand colors and fonts.
+                            </li>
+                            <li>
+                                <strong>Video Editing</strong>
+                                Create short-form videos using CapCut or InShot. Add captions, transitions, and brand watermark.
+                            </li>
+                            <li>
+                                <strong>Copywriting</strong>
+                                Write compelling captions (150-200 characters). Use emojis, CTAs, and questions to boost engagement.
+                            </li>
+                            <li>
+                                <strong>Blog Content</strong>
+                                Write 800-1200 word SEO-optimized articles. Include keywords, meta descriptions, and internal links.
+                            </li>
+                            <li>
+                                <strong>User-Generated Content</strong>
+                                Curate and repost customer content (with permission). Tag original creators and use branded hashtags.
+                            </li>
+                        </ul>
+                        <div class="tip-box">
+                            <strong>💡 Pro Tip:</strong>
+                            Batch create content on Mondays. Design 10-15 posts at once for efficiency. Store in organized folders.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Email Marketing -->
+            <div class="section" id="email">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <h2><span class="icon">📧</span> Email Marketing</h2>
+                    <span class="toggle">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-inner">
+                        <ul class="task-list">
+                            <li>
+                                <strong>Campaign Setup</strong>
+                                Create campaigns in Mailchimp/Klaviyo. Segment lists by behavior, location, and preferences.
+                            </li>
+                            <li>
+                                <strong>Email Design</strong>
+                                Mobile-first templates. Clear CTA buttons. 40% text, 60% visuals. Test on multiple devices.
+                            </li>
+                            <li>
+                                <strong>Subject Lines</strong>
+                                Keep under 50 characters. Use personalization and urgency. A/B test different versions.
+                            </li>
+                            <li>
+                                <strong>Automation Flows</strong>
+                                Set up welcome series, abandoned cart, and re-engagement emails. Trigger based on user actions.
+                            </li>
+                            <li>
+                                <strong>List Management</strong>
+                                Clean lists monthly. Remove inactive subscribers. Comply with GDPR and data privacy laws.
+                            </li>
+                        </ul>
+                        <div class="tip-box">
+                            <strong>💡 Pro Tip:</strong>
+                            Best send times: Tuesday-Thursday, 10AM or 2PM. Avoid Mondays and weekends for B2B emails.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analytics & Reporting -->
+            <div class="section" id="analytics">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <h2><span class="icon">📊</span> Analytics & Reporting</h2>
+                    <span class="toggle">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-inner">
+                        <ul class="task-list">
+                            <li>
+                                <strong>Social Media Metrics</strong>
+                                Track: Reach, Engagement Rate, Follower Growth, Click-through Rate. Use native insights and analytics tools.
+                            </li>
+                            <li>
+                                <strong>Website Analytics</strong>
+                                Monitor Google Analytics: Traffic sources, bounce rate, conversion rate, top pages. Set up goals.
+                            </li>
+                            <li>
+                                <strong>Email Performance</strong>
+                                Key metrics: Open rate (20-25%), Click rate (2-5%), Unsubscribe rate (<0.5%). Identify top-performing emails.
+                            </li>
+                            <li>
+                                <strong>Weekly Reports</strong>
+                                Create visual reports with charts. Highlight wins, challenges, and recommendations. Compare week-over-week.
+                            </li>
+                            <li>
+                                <strong>Competitor Analysis</strong>
+                                Monitor competitors' content, engagement, and campaigns. Identify gaps and opportunities.
+                            </li>
+                        </ul>
+                        <div class="tip-box">
+                            <strong>💡 Pro Tip:</strong>
+                            Create dashboard templates for quick weekly reporting. Focus on actionable insights, not just numbers.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Client Management -->
+            <div class="section" id="client">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <h2><span class="icon">📞</span> Client Management & Communication</h2>
+                    <span class="toggle">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-inner">
+                        <ul class="task-list">
+                            <li>
+                                <strong>Client Onboarding Checklist</strong>
+                                Collect: Brand guidelines, login credentials, content calendar, target audience info. Set expectations on deliverables and timelines.
+                            </li>
+                            <li>
+                                <strong>Daily/Weekly Reporting</strong>
+                                Send EOD (End of Day) updates via email/Slack. Weekly summary every Friday with tasks completed, metrics, and next week's plan.
+                            </li>
+                            <li>
+                                <strong>Running Client Meetings</strong>
+                                Prepare agenda 24hrs before. Take notes during call. Send meeting minutes within 2 hours. Action items with deadlines clearly stated.
+                            </li>
+                            <li>
+                                <strong>Handling Difficult Clients</strong>
+                                Stay professional and calm. Document all communications. Set clear boundaries. Know when to escalate or walk away.
+                            </li>
+                            <li>
+                                <strong>Invoice & Payment Tracking</strong>
+                                Use PayPal, Wise, or Payoneer. Invoice on same date monthly. Follow up on late payments after 7 days. Keep payment records organized.
+                            </li>
+                            <li>
+                                <strong>Contract Essentials</strong>
+                                Include: Scope of work, deliverables, payment terms, revision policy, termination clause. Use digital signatures (DocuSign, HelloSign).
+                            </li>
+                        </ul>
+                        <div class="tip-box">
+                            <strong>💡 Pro Tip:</strong>
+                            Create template responses for common client questions. Save 30+ minutes daily with pre-written professional replies.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paid Advertising -->
+            <div class="section" id="ads">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <h2><span class="icon">🎯</span> Paid Advertising (FB & Google Ads)</h2>
+                    <span class="toggle">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-inner">
+                        <ul class="task-list">
+                            <li>
+                                <strong>Facebook Ads Setup</strong>
+                                Create Business Manager account. Install Meta Pixel on website. Set up Ads Manager. Start with conversion objective campaigns.
+                            </li>
+                            <li>
+                                <strong>Audience Targeting</strong>
+                                Core audiences: Demographics, interests, behaviors. Custom audiences: Website visitors, email lists. Lookalike audiences: 1-3% similarity.
+                            </li>
+                            <li>
+                                <strong>Budget Management</strong>
+                                Start with ₱500-1000/day test budget. Use CBO (Campaign Budget Optimization). Monitor Cost Per Result. Scale winning ad sets by 20% every 3 days.
+                            </li>
+                            <li>
+                                <strong>Ad Creative Best Practices</strong>
+                                Use 1080x1080 for feed, 1080x1920 for stories. Video ads: 15-30 seconds. Hook in first 3 seconds. Clear CTA button.
+                            </li>
+                            <li>
+                                <strong>A/B Testing</strong>
+                                Test one variable at a time: Image vs video, headline variations, audience types. Run for 3-7 days minimum. 95% confidence level.
+                            </li>
+                            <li>
+                                <strong>Google Ads Campaigns</strong>
+                                Search ads: Keyword research with Google Keyword Planner. Display ads: Banner sizes 300x250, 728x90. Shopping ads: Product feed optimization.
+                            </li>
+                            <li>
+                                <strong>Ad Performance Metrics</strong>
+                                Track: CTR (1-2% good), CPC, CPM, ROAS (3:1 minimum), Conversion rate. Use UTM parameters for tracking.
+                            </li>
+                        </ul>
+                        <div class="tip-box">
+                            <strong>💡 Pro Tip:</strong>
+                            Save high-performing ads to "Creative Library". Reuse winning formulas with fresh visuals. Check ads daily at 10AM for optimal performance.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- E-commerce & Shopify -->
+            <div class="section" id="ecommerce">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <h2><span class="icon">🛍️</span> E-commerce & Shopify Management</h2>
+                    <span class="toggle">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-inner">
+                        <ul class="task-list">
+                            <li>
+                                <strong>Product Listing Optimization</strong>
+                                Write SEO titles (60 chars max). Use high-quality images (2000x2000px). Detailed descriptions with bullet points. Include size charts and FAQs.
+                            </li>
+                            <li>
+                                <strong>Order Processing</strong>
+                                Check orders 3x daily (9AM, 1PM, 5PM). Process within 24 hours. Send tracking numbers immediately. Update order status in Shopify.
+                            </li>
+                            <li>
+                                <strong>Customer Service</strong>
+                                Respond to inquiries within 2 hours. Use canned responses for FAQs. Handle returns/refunds professionally. Resolve issues before escalation.
+                            </li>
+                            <li>
+                                <strong>Inventory Management</strong>
+                                Update stock levels daily. Set low-stock alerts (10 units). Coordinate with suppliers weekly. Use inventory apps (Stocky, TradeGecko).
+                            </li>
+                            <li>
+                                <strong>Essential Shopify Apps</strong>
+                                Oberlo (dropshipping), Klaviyo (email), Yotpo (reviews), Privy (popups), ReConvert (upsells), Lucky Orange (heatmaps).
+                            </li>
+                            <li>
+                                <strong>Discounts & Promotions</strong>
+                                Create discount codes strategically. BOGO offers, free shipping thresholds. Flash sales (24-48 hours). Abandoned cart discounts (10-15%).
+                            </li>
+                            <li>
+                                <strong>Store Analytics</strong>
+                                Monitor: Conversion rate (2-3% average), AOV (Average Order Value), Cart abandonment rate. Weekly sales reports with trends.
+                            </li>
+                        </ul>
+                        <div class="tip-box">
+                            <strong>💡 Pro Tip:</strong>
+                            Optimize product pages for mobile first (70% of e-commerce traffic). Fast loading speed = higher conversions. Compress all images.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Marketing & YouTube -->
+            <div class="section" id="video">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <h2><span class="icon">🎥</span> Video Marketing & YouTube</h2>
+                    <span class="toggle">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-inner">
+                        <ul class="task-list">
+                            <li>
+                                <strong>YouTube Channel Optimization</strong>
+                                Channel name with keywords. Compelling banner (2560x1440). Complete "About" section. Add social links. Create playlists by topic.
+                            </li>
+                            <li>
+                                <strong>Video SEO</strong>
+                                Keyword-rich titles (60 chars). Detailed descriptions (200+ words). Tags: 10-15 relevant keywords. Custom thumbnails (1280x720, faces with emotion).
+                            </li>
+                            <li>
+                                <strong>Thumbnail Creation</strong>
+                                Use Canva YouTube template. Bold text (3-5 words max). High contrast colors. Show faces with expressions. Consistent brand style.
+                            </li>
+                            <li>
+                                <strong>Video Content Calendar</strong>
+                                Upload 2-3x weekly minimum. Best days: Tuesday, Thursday, Saturday. Post between 2PM-4PM EST. Plan 1 month ahead.
+                            </li>
+                            <li>
+                                <strong>YouTube Analytics</strong>
+                                Track: Watch time, CTR (4-10% good), Average view duration (50%+), Subscriber growth. Check "Traffic sources" for optimization.
+                            </li>
+                            <li>
+                                <strong>Short-Form Video Strategy</strong>
+                                YouTube Shorts: 15-60 seconds vertical. Hook in first 3 seconds. Use trending sounds. Post 1-2 Shorts daily for growth.
+                            </li>
+                            <li>
+                                <strong>Long-Form vs Short-Form</strong>
+                                Long-form (8-15 min): Deep tutorials, storytelling. Short-form (<60s): Quick tips, entertainment. Mix both for algorithm boost.
+                            </li>
+                            <li>
+                                <strong>Video Editing Workflow</strong>
+                                Use CapCut or DaVinci Resolve. Add: Intro (5s), B-roll, captions, transitions, outro with CTA. Export in 1080p minimum.
+                            </li>
+                        </ul>
+                        <div class="tip-box">
+                            <strong>💡 Pro Tip:</strong>
+                            First 48 hours are critical. Share new videos across all social platforms. Reply to every comment in first 24 hours to boost engagement.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lead Generation -->
+            <div class="section" id="leads">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <h2><span class="icon">💰</span> Lead Generation & Sales Funnels</h2>
+                    <span class="toggle">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-inner">
+                        <ul class="task-list">
+                            <li>
+                                <strong>Landing Page Creation</strong>
+                                Use Unbounce, Leadpages, or ClickFunnels. Clear headline with value proposition. Single CTA (no distractions). Mobile-optimized design.
+                            </li>
+                            <li>
+                                <strong>Lead Magnet Ideas</strong>
+                                Free ebooks, checklists, templates, webinars, free trials, discount codes. Must solve specific problem. Deliver via email instantly.
+                            </li>
+                            <li>
+                                <strong>Opt-in Form Optimization</strong>
+                                Keep fields minimal (name + email only). Clear benefit statement. Privacy assurance. A/B test button colors and copy.
+                            </li>
+                            <li>
+                                <strong>CRM Setup & Management</strong>
+                                Use HubSpot, Zoho, or Pipedrive. Tag leads by source, interest, behavior. Create custom fields. Set up automation workflows.
+                            </li>
+                            <li>
+                                <strong>Lead Nurture Sequences</strong>
+                                Welcome email (immediate). Educational content (Days 2, 4, 7). Case studies (Day 10). Sales offer (Day 14). Re-engagement (Day 30).
+                            </li>
+                            <li>
+                                <strong>Sales Funnel Stages</strong>
+                                Awareness → Interest → Decision → Action. Create content for each stage. Track conversion rates between stages.
+                            </li>
+                            <li>
+                                <strong>Conversion Rate Optimization</strong>
+                                Test: Headlines, CTA buttons, form length, page layout. Use heatmaps (Hotjar, Crazy Egg). Aim for 2-5% conversion rate.
+                            </li>
+                            <li>
+                                <strong>Lead Scoring System</strong>
+                                Assign points: Email opens (+5), link clicks (+10), page visits (+15), form fills (+50). Prioritize hot leads (70+ points).
+                            </li>
+                        </ul>
+                        <div class="tip-box">
+                            <strong>💡 Pro Tip:</strong>
+                            Follow up with leads within 5 minutes of opt-in. Speed increases conversion by 400%. Use automation for instant responses.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Influencer Outreach -->
+            <div class="section" id="influencer">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <h2><span class="icon">🤝</span> Influencer & Partnership Outreach</h2>
+                    <span class="toggle">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-inner">
+                        <ul class="task-list">
+                            <li>
+                                <strong>Finding Relevant Influencers</strong>
+                                Use Instagram search, hashtags, or tools (Upfluence, AspireIQ). Check: Engagement rate (3-6%), audience demographics, content alignment.
+                            </li>
+                            <li>
+                                <strong>Influencer Vetting Process</strong>
+                                Analyze: Follower quality (real vs fake), comment authenticity, past brand partnerships. Request media kit and rate card.
+                            </li>
+                            <li>
+                                <strong>Outreach Email Template</strong>
+                                Subject: Collaboration Opportunity with [Brand]. Personalize intro. Explain mutual benefit. Be specific about offer. Include CTA.
+                            </li>
+                            <li>
+                                <strong>Negotiating Partnerships</strong>
+                                Start with product exchange for micro-influencers (<10k). Paid posts: ₱5,000-50,000 depending on reach. Lock in usage rights.
+                            </li>
+                            <li>
+                                <strong>Campaign Brief Creation</strong>
+                                Include: Goals, key messages, hashtags, posting schedule, do's/don'ts, deliverables, deadline, approval process.
+                            </li>
+                            <li>
+                                <strong>Tracking Collaboration ROI</strong>
+                                Use unique discount codes or UTM links. Track: Reach, engagement, clicks, conversions. Calculate cost per acquisition.
+                            </li>
+                            <li>
+                                <strong>Affiliate Program Management</strong>
+                                Set up on Shopify, ShareASale, or Impact. Offer 10-20% commission. Provide promotional materials. Monthly payout schedule.
+                            </li>
+                            <li>
+                                <strong>Relationship Maintenance</strong>
+                                Send thank you gifts after campaigns. Feature influencer content on brand channels. Offer exclusive access to new products.
+                            </li>
+                        </ul>
+                        <div class="tip-box">
+                            <strong>💡 Pro Tip:</strong>
+                            Micro-influencers (5k-50k followers) often have better engagement rates than mega influencers. More authentic, budget-friendly.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cybersecurity -->
+            <div class="section" id="security">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <h2><span class="icon">🔐</span> Cybersecurity & Data Privacy</h2>
+                    <span class="toggle">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-inner">
+                        <ul class="task-list">
+                            <li>
+                                <strong>Password Management</strong>
+                                Use LastPass, 1Password, or Bitwarden. Create 16+ character passwords with symbols. Never reuse passwords. Change every 90 days.
+                            </li>
+                            <li>
+                                <strong>Two-Factor Authentication (2FA)</strong>
+                                Enable on ALL accounts: Google, Facebook, email, CRM, payment platforms. Use authenticator app (Google Authenticator, Authy).
+                            </li>
+                            <li>
+                                <strong>Client Data Protection</strong>
+                                Never share login credentials publicly. Use encrypted password sharing (1Password shared vaults). Log out after each session.
+                            </li>
+                            <li>
+                                <strong>GDPR Compliance Basics</strong>
+                                Get consent before collecting data. Allow users to access/delete their data. Have privacy policy. Report breaches within 72 hours.
+                            </li>
+                            <li>
+                                <strong>Secure File Sharing</strong>
+                                Use Google Drive (password-protected links), Dropbox, or WeTransfer. Set expiration dates. Never email sensitive files unencrypted.
+                            </li>
+                            <li>
+                                <strong>Phishing & Scam Prevention</strong>
+                                Verify sender email addresses. Don't click suspicious links. Check for HTTPS on websites. Report phishing attempts immediately.
+                            </li>
+                            <li>
+                                <strong>Device Security</strong>
+                                Keep OS and apps updated. Use antivirus (Windows Defender, Malwarebytes). Enable firewall. Lock screen when away (5 min timeout).
+                            </li>
+                            <li>
+                                <strong>Backup Strategy</strong>
+                                3-2-1 Rule: 3 copies, 2 different media, 1 offsite. Use cloud backup (Google Drive, Backblaze). Weekly backup schedule minimum.
+                            </li>
+                        </ul>
+                        <div class="tip-box">
+                            <strong>💡 Pro Tip:</strong>
+                            Never use public Wi-Fi for work without VPN. Use NordVPN or ExpressVPN to encrypt your connection and protect client data.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rates & Pricing -->
+            <div class="section" id="rates">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <h2><span class="icon">💵</span> Rates & Pricing Guide 2026</h2>
+                    <span class="toggle">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-inner">
+                        <ul class="task-list">
+                            <li>
+                                <strong>Philippine VA Market Rates</strong>
+                                Entry-level (0-1 yr): ₱250-400/hr or $3-5/hr. Mid-level (2-3 yrs): ₱450-650/hr or $6-10/hr. Expert (4+ yrs): ₱700-1200/hr or $12-20/hr.
+                            </li>
+                            <li>
+                                <strong>Specialized Skills Premium</strong>
+                                Paid ads management: +30-50%. Video editing: +20-40%. Graphic design: +25-35%. SEO/Analytics: +30-45%. Full-stack marketing: +50-70%.
+                            </li>
+                            <li>
+                                <strong>Hourly vs Package Pricing</strong>
+                                Hourly: Flexible, good for new clients. Packages: More profitable, predictable income. Retainers: 20+ hrs/week, best for stability.
+                            </li>
+                            <li>
+                                <strong>Package Pricing Examples</strong>
+                                Basic (10hrs): ₱4,000-6,000. Standard (20hrs): ₱8,000-12,000. Premium (40hrs): ₱16,000-24,000. Include specific deliverables.
+                            </li>
+                            <li>
+                                <strong>How to Price Your Services</strong>
+                                Calculate: (Desired monthly income ÷ billable hours) × 1.5 for overhead. Research competitor rates. Factor in your experience and results.
+                            </li>
+                            <li>
+                                <strong>When to Raise Rates</strong>
+                                After 6-12 months with same client. When adding new skills. If overbooked with clients. Industry rate increases. Provide 30-day notice.
+                            </li>
+                            <li>
+                                <strong>Negotiation Scripts</strong>
+                                "My rate is $X based on my experience in [specialty]." "I can offer a package deal at $Y for Z hours." "I'm worth this because [results]."
+                            </li>
+                            <li>
+                                <strong>Value-Based Pricing</strong>
+                                Price based on ROI you deliver, not hours. If you generate ₱100k revenue, charge ₱10-20k. Track and showcase your results.
+                            </li>
+                        </ul>
+                        <div class="tip-box">
+                            <strong>💡 Pro Tip:</strong>
+                            Don't compete on price alone. Charge premium rates by showcasing expertise, results, and specialization. Quality clients pay for value.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Platform-Specific -->
+            <div class="section" id="platforms">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <h2><span class="icon">📱</span> Platform-Specific Strategies</h2>
+                    <span class="toggle">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-inner">
+                        <ul class="task-list">
+                            <li>
+                                <strong>Instagram Best Practices</strong>
+                                Post 1-2 feed posts daily. 3-5 Stories. 3-4 Reels weekly. Best times: 11AM, 2PM, 7PM. Use all 30 hashtags. Carousel posts get 3x engagement.
+                            </li>
+                            <li>
+                                <strong>TikTok Marketing Strategies</strong>
+                                Post 1-3x daily. Hook in 1 second. Use trending sounds. Participate in challenges. 15-30 second videos perform best. Native content > polished ads.
+                            </li>
+                            <li>
+                                <strong>LinkedIn B2B Marketing</strong>
+                                Post 3-5x weekly. Best days: Tuesday-Thursday. Personal posts > company posts. Use 3-5 hashtags. Video content gets 5x more engagement.
+                            </li>
+                            <li>
+                                <strong>Pinterest for E-commerce</strong>
+                                Vertical images (1000x1500). Create idea pins (carousels). Use keyword-rich descriptions. Link to product pages. Best for home, fashion, food.
+                            </li>
+                            <li>
+                                <strong>Twitter/X Engagement Tactics</strong>
+                                Tweet 5-10x daily. Use threads for long-form. Reply to trending topics. Post between 8AM-10AM, 6PM-9PM. Images get 150% more retweets.
+                            </li>
+                            <li>
+                                <strong>Facebook Business Strategy</strong>
+                                Post 1-2x daily. Use Facebook Groups for community. Go live weekly. Boost top organic posts. Share user-generated content.
+                            </li>
+                            <li>
+                                <strong>YouTube Shorts Strategy</strong>
+                                Post 1-2 Shorts daily. Repurpose TikTok/Reels content. Use #Shorts in description. Vertical 9:16 format. Drive to long-form videos.
+                            </li>
+                            <li>
+                                <strong>WhatsApp Business Marketing</strong>
+                                Set up automated greetings. Create broadcast lists (256 max). Use catalog feature for products. Quick replies for FAQs. Status updates daily.
+                            </li>
+                        </ul>
+                        <div class="tip-box">
+                            <strong>💡 Pro Tip:</strong>
+                            Each platform has unique algorithms. Don't copy-paste content across all. Adapt format, tone, and style for each platform's audience.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Productivity & Workflow -->
+            <div class="section" id="productivity">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <h2><span class="icon">🚀</span> Productivity & Workflow Optimization</h2>
+                    <span class="toggle">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-inner">
+                        <ul class="task-list">
+                            <li>
+                                <strong>Daily Task Template</strong>
+                                Morning (8-10AM): Check emails, respond to comments, post scheduled content. Midday (10-12PM): Content creation, design work. Afternoon (1-4PM): Strategy, analytics, meetings. Evening (4-6PM): Planning tomorrow, admin tasks.
+                            </li>
+                            <li>
+                                <strong>Weekly Task Template</strong>
+                                Monday: Plan week, content calendar. Tuesday: Batch create graphics. Wednesday: Write copy, blog posts. Thursday: Video editing. Friday: Analytics, reporting. Weekend: Minimal work/rest.
+                            </li>
+                            <li>
+                                <strong>SOP Creation</strong>
+                                Document every recurring task step-by-step. Include screenshots. Use Notion, Google Docs, or Loom videos. Update quarterly. Makes you replaceable = valuable.
+                            </li>
+                            <li>
+                                <strong>Keyboard Shortcuts Mastery</strong>
+                                Canva: Ctrl+D (duplicate), Ctrl+G (group). Chrome: Ctrl+T (new tab), Ctrl+Shift+T (reopen). General: Ctrl+C/V (copy/paste), Ctrl+Z (undo).
+                            </li>
+                            <li>
+                                <strong>File Organization System</strong>
+                                Structure: Client Name > Platform > Year > Month. Name files: YYYYMMDD_Description.png. Use cloud storage (Google Drive, Dropbox). Weekly cleanup.
+                            </li>
+                            <li>
+                                <strong>Avoiding Burnout Tips</strong>
+                                Take 5-min breaks every hour. 30-min lunch break away from screen. Set work hours (no checking after 6PM). Weekend detox from social media. Exercise 3x weekly.
+                            </li>
+                            <li>
+                                <strong>Time-Blocking Technique</strong>
+                                Dedicate 2-hour blocks for deep work. No interruptions during blocks. Use Focus mode on phone. Schedule breaks between blocks. Most productive: 9-11AM, 2-4PM.
+                            </li>
+                            <li>
+                                <strong>Automation Tools to Use</strong>
+                                Zapier: Connect apps (email to Trello). IFTTT: Social media cross-posting. Buffer/Hootsuite: Schedule posts. TextExpander: Canned responses. Grammarly: Auto proofreading.
+                            </li>
+                        </ul>
+                        <div class="tip-box">
+                            <strong>💡 Pro Tip:</strong>
+                            Batch similar tasks together. Create all graphics Monday, write all copy Tuesday. Context-switching kills productivity. Stay in one mode.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resources & Training -->
+            <div class="section" id="resources">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <h2><span class="icon">📚</span> Resources & Training</h2>
+                    <span class="toggle">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-inner">
+                        <ul class="task-list">
+                            <li>
+                                <strong>Free Certification Courses</strong>
+                                Google Digital Garage (Digital Marketing), HubSpot Academy (Inbound, Email, Social), Meta Blueprint (Facebook Ads), YouTube Creator Academy, Semrush Academy (SEO).
+                            </li>
+                            <li>
+                                <strong>Recommended YouTube Channels</strong>
+                                Neil Patel (Marketing), Vanessa Lau (Social Media), Think Media (YouTube Growth), Charlie Chang (VA Tips), Jesse Cunningham (Facebook Ads).
+                            </li>
+                            <li>
+                                <strong>Filipino VA Communities</strong>
+                                Facebook Groups: "Filipino Virtual Assistants", "PH Digital Marketers", "OFW Virtual Assistant". Discord: VA Hangout PH. Telegram: Marketing VAs Philippines.
+                            </li>
+                            <li>
+                                <strong>Marketing Podcasts</strong>
+                                Marketing School (Neil Patel & Eric Siu), Social Media Marketing Podcast (Michael Stelzner), The GaryVee Audio Experience, Online Marketing Made Easy (Amy Porterfield).
+                            </li>
+                            <li>
+                                <strong>Industry Newsletters</strong>
+                                Morning Brew (Business news), The Hustle (Marketing trends), Social Media Today, Buffer's newsletter, Mailchimp's Marketing Tips.
+                            </li>
+                            <li>
+                                <strong>Essential Blogs to Follow</strong>
+                                Buffer Blog, HubSpot Marketing Blog, Moz Blog (SEO), Social Media Examiner, Sprout Social Insights, Hootsuite Blog.
+                            </li>
+                            <li>
+                                <strong>Paid Courses Worth It</strong>
+                                Udemy: "Complete Digital Marketing Course" (₱599). Skillshare: Unlimited classes (₱399/mo). Coursera: Google Digital Marketing Certificate (₱2,500).
+                            </li>
+                            <li>
+                                <strong>Tools for Learning</strong>
+                                Notion (organize notes), Anki (flashcards), Evernote (clip articles), Pocket (save for later), Feedly (RSS reader for blogs).
+                            </li>
+                        </ul>
+                        <div class="tip-box">
+                            <strong>💡 Pro Tip:</strong>
+                            Dedicate 30 minutes daily to learning (6AM or 9PM). Complete 1 certification monthly. Apply new skills to current projects immediately.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- International Clients -->
+            <div class="section" id="international">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <h2><span class="icon">🌍</span> Working with International Clients</h2>
+                    <span class="toggle">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-inner">
+                        <ul class="task-list">
+                            <li>
+                                <strong>Time Zone Management</strong>
+                                Know client's timezone (EST, PST, GMT). Use World Clock app. Schedule overlap hours (PH evening = US morning). Set calendar to both timezones.
+                            </li>
+                            <li>
+                                <strong>Cultural Communication Tips</strong>
+                                Be direct but polite with Western clients. Avoid "po" and "opo". Use "I'll handle this" not "I'll try". Underpromise, overdeliver always.
+                            </li>
+                            <li>
+                                <strong>Payment Methods</strong>
+                                PayPal (3.9% + ₱15 fee), Wise/TransferWise (lowest fees 0.5-1%), Payoneer (good for marketplaces), Direct bank transfer (rare, high fees).
+                            </li>
+                            <li>
+                                <strong>Payment Terms & Invoicing</strong>
+                                Net-15 or Net-30 common. Invoice on 1st or 15th monthly. Use PayPal invoices or Wave/FreshBooks. Include VAT if registered (12%).
+                            </li>
+                            <li>
+                                <strong>Tax Considerations</strong>
+                                Register as self-employed with BIR. File quarterly income tax (8% or graduated). Keep all payment receipts. Consult accountant for ₱250k+ annual income.
+                            </li>
+                            <li>
+                                <strong>Professional Communication</strong>
+                                Use proper grammar (Grammarly helps). Respond within 24 hours max. Video calls: good lighting, quiet background. Professional email signature.
+                            </li>
+                            <li>
+                                <strong>Building Trust Remotely</strong>
+                                Weekly check-ins with updates. Share screen during calls. Be transparent about challenges. Deliver before deadlines. Ask for testimonials.
+                            </li>
+                            <li>
+                                <strong>Long-Term Client Retention</strong>
+                                Anticipate needs proactively. Suggest improvements. Stay updated on their industry. Send holiday greetings. Be reliable and consistent.
+                            </li>
+                        </ul>
+                        <div class="tip-box">
+                            <strong>💡 Pro Tip:</strong>
+                            Set "working hours" in email signature (e.g., 9AM-6PM PHT / 8PM-5AM EST). Manage expectations. Use Calendly for easy scheduling.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Career Growth -->
+            <div class="section" id="portfolio">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <h2><span class="icon">⭐</span> Portfolio & Career Growth</h2>
+                    <span class="toggle">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-inner">
+                        <ul class="task-list">
+                            <li>
+                                <strong>Building Your Portfolio</strong>
+                                Create website (WordPress, Wix, Carrd). Include: About, Services, Case Studies, Testimonials, Contact. Update monthly with new projects.
+                            </li>
+                            <li>
+                                <strong>Case Study Format</strong>
+                                Client/Industry → Challenge → Strategy → Execution → Results (with numbers). Use before/after screenshots. Keep to 1 page each.
+                            </li>
+                            <li>
+                                <strong>Collecting Testimonials</strong>
+                                Ask after successful campaigns. Provide template: "Working with [Name] helped us achieve [Result]. Highly recommend for [Service]." Get LinkedIn recommendations.
+                            </li>
+                            <li>
+                                <strong>LinkedIn Profile Optimization</strong>
+                                Professional photo. Headline: "Marketing VA | Facebook Ads Specialist | Helped 20+ E-commerce Brands". Skills endorsements. Post 3x weekly.
+                            </li>
+                            <li>
+                                <strong>Personal Branding Strategy</strong>
+                                Choose niche (e.g., "E-commerce Facebook Ads Expert"). Share wins and learnings on social. Create content about your expertise. Be consistent.
+                            </li>
+                            <li>
+                                <strong>Upskilling Path</strong>
+                                Year 1: Master basics (social, content). Year 2: Add paid ads or design. Year 3: Full-stack marketing or specialize deep. Year 4+: Consulting/Agency.
+                            </li>
+                            <li>
+                                <strong>Networking & Opportunities</strong>
+                                Join VA Facebook groups. Attend webinars/workshops. Comment on industry leaders' posts. Collaborate with other VAs on projects.
+                            </li>
+                            <li>
+                                <strong>Scaling Your VA Business</strong>
+                                Raise rates every 6-12 months. Hire subcontractors for overflow work. Create passive income (courses, templates). Build agency eventually.
+                            </li>
+                        </ul>
+                        <div class="tip-box">
+                            <strong>💡 Pro Tip:</strong>
+                            Document EVERYTHING you do well. Screenshot metrics, save client praise, record before/after data. Your portfolio is your best salesperson.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Essential Tools -->
+            <div class="section" id="tools">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <h2><span class="icon">🛠️</span> Essential Tools & Platforms</h2>
+                    <span class="toggle">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-inner">
+                        <div class="tool-grid">
+                            <div class="tool-card">
+                                <div class="tool-icon">🎨</div>
+                                <div class="tool-name">Canva Pro</div>
+                            </div>
+                            <div class="tool-card">
+                                <div class="tool-icon">📅</div>
+                                <div class="tool-name">Buffer</div>
+                            </div>
+                            <div class="tool-card">
+                                <div class="tool-icon">📧</div>
+                                <div class="tool-name">Mailchimp</div>
+                            </div>
+                            <div class="tool-card">
+                                <div class="tool-icon">📊</div>
+                                <div class="tool-name">Google Analytics</div>
+                            </div>
+                            <div class="tool-card">
+                                <div class="tool-icon">🎬</div>
+                                <div class="tool-name">CapCut</div>
+                            </div>
+                            <div class="tool-card">
+                                <div class="tool-icon">🔍</div>
+                                <div class="tool-name">SEMrush</div>
+                            </div>
+                            <div class="tool-card">
+                                <div class="tool-icon">💬</div>
+                                <div class="tool-name">Slack</div>
+                            </div>
+                            <div class="tool-card">
+                                <div class="tool-icon">📋</div>
+                                <div class="tool-name">Trello</div>
+                            </div>
+                        </div>
+                        <div class="tip-box" style="margin-top: 15px;">
+                            <strong>💡 Pro Tip:</strong>
+                            Master 2-3 tools deeply rather than knowing many superficially. Free versions are available for most tools.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Best Practices -->
+            <div class="section">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <h2><span class="icon">⭐</span> Best Practices for Filipino VAs</h2>
+                    <span class="toggle">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-inner">
+                        <ul class="task-list">
+                            <li>
+                                <strong>Time Management</strong>
+                                Use Pomodoro technique (25 min work, 5 min break). Block time for specific tasks. Set realistic deadlines.
+                            </li>
+                            <li>
+                                <strong>Communication</strong>
+                                Update clients daily via email/Slack. Be proactive about problems. Ask clarifying questions early.
+                            </li>
+                            <li>
+                                <strong>Continuous Learning</strong>
+                                Take free courses (Google Digital Garage, HubSpot Academy). Follow marketing blogs and podcasts.
+                            </li>
+                            <li>
+                                <strong>Portfolio Building</strong>
+                                Document all successful campaigns. Create case studies with metrics. Update LinkedIn regularly.
+                            </li>
+                            <li>
+                                <strong>Work-Life Balance</strong>
+                                Set clear working hours (consider PHT vs client timezone). Take breaks. Maintain healthy boundaries.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Marketing VA Excellence 2026</strong></p>
+            <p>Stay updated. Stay professional. Deliver results.</p>
+            <p style="margin-top: 8px; opacity: 0.8;">🇵🇭 Made for Filipino Virtual Assistants</p>
+        </div>
+    </div>
+
+    <script>
+        // Toggle section expand/collapse
+        function toggleSection(header) {
+            const section = header.parentElement;
+            section.classList.toggle('active');
+        }
+
+        // Scroll to section
+        function scrollToSection(id) {
+            const section = document.getElementById(id);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                // Auto-expand the section
+                if (!section.classList.contains('active')) {
+                    section.classList.add('active');
+                }
+            }
+        }
+
+        // Auto-expand first section on load
+        window.addEventListener('load', () => {
+            const firstSection = document.querySelector('.section');
+            if (firstSection) {
+                firstSection.classList.add('active');
+            }
+        });
+
+        // Prevent quick-nav scroll issues on mobile
+        const quickNav = document.querySelector('.quick-nav');
+        let isScrolling = false;
+        quickNav.addEventListener('touchstart', () => {
+            isScrolling = false;
+        });
+        quickNav.addEventListener('touchmove', () => {
+            isScrolling = true;
+        });
+    </script>
+</body>
+</html>
